@@ -16,6 +16,9 @@ export const countries: Country[] = [
   { id: "mx", slug: "mexico",    nombre: "México",    moneda: "MXN", simbolo: "$",   bandera: "🇲🇽" },
   { id: "co", slug: "colombia",  nombre: "Colombia",  moneda: "COP", simbolo: "$",   bandera: "🇨🇴" },
   { id: "ar", slug: "argentina", nombre: "Argentina", moneda: "ARS", simbolo: "$",   bandera: "🇦🇷" },
-  { id: "ec", slug: "ecuador",   nombre: "Ecuador",   moneda: "USD", simbolo: "$",   bandera: "🇪🇨" },
-  { id: "ve", slug: "venezuela", nombre: "Venezuela", moneda: "VES", simbolo: "Bs.", bandera: "🇻🇪" },
+  { id: "ec", slug: "ecuador",   nombre: "Ecuador",            moneda: "USD", simbolo: "$",   bandera: "🇪🇨" },
+  { id: "ve", slug: "venezuela", nombre: "Venezuela",           moneda: "VES", simbolo: "Bs.", bandera: "🇻🇪" },
+  { id: "pe", slug: "peru",      nombre: "Perú",               moneda: "PEN", simbolo: "S/", bandera: "🇵🇪" },
+  { id: "cl", slug: "chile",     nombre: "Chile",              moneda: "CLP", simbolo: "$",   bandera: "🇨🇱" },
+  { id: "do", slug: "dominicana", nombre: "Rep. Dominicana",   moneda: "DOP", simbolo: "RD$", bandera: "🇩🇴" },
 ];

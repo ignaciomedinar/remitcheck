@@ -4,6 +4,7 @@ import { useMemo } from "react";
 import { Country } from "@/config/countries";
 import { fmtNum } from "@/lib/fmt";
 import { PARTNER_LINKS } from "@/config/affiliates";
+import { trackAffiliateClick } from "@/lib/analytics";
 
 interface Props {
   monto: number;
@@ -108,12 +109,13 @@ function RankBadge({ rank, isBest }: { rank: number; isBest: boolean }) {
   return null;
 }
 
-function SendButton({ href }: { href: string }) {
+function SendButton({ href, partnerName }: { href: string; partnerName: string }) {
   return (
     <a
       href={href}
       target="_blank"
       rel="noopener noreferrer nofollow"
+      onClick={() => trackAffiliateClick(partnerName)}
       className="inline-flex items-center justify-center whitespace-nowrap rounded-lg bg-blue-600 px-3 py-2 text-xs font-semibold text-white shadow-sm transition-all hover:bg-blue-700 hover:shadow-md active:scale-95"
     >
       Enviar ahora →
@@ -230,7 +232,7 @@ export default function ComparisonTable({ monto, rate, origen, destino, classNam
                       </td>
 
                       <td className="px-3 py-3 align-middle w-px">
-                        <SendButton href={affiliateHref} />
+                        <SendButton href={affiliateHref} partnerName={row.provider.name} />
                       </td>
                     </tr>
                   );
@@ -276,7 +278,7 @@ export default function ComparisonTable({ monto, rate, origen, destino, classNam
                           </p>
                         )}
                       </div>
-                      <SendButton href={affiliateHref} />
+                      <SendButton href={affiliateHref} partnerName={row.provider.name} />
                     </div>
                   </div>
                 </li>
