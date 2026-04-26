@@ -1,0 +1,45 @@
+<svg viewBox="0 0 600 300" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', Arial, sans-serif">
+
+  <!-- Background -->
+  <rect width="600" height="300" fill="#F0F6FF" rx="20"/>
+
+  <!-- === ICON: Circle with transfer arrow and comparison bars === -->
+  <circle cx="130" cy="140" r="75" fill="none" stroke="#1A56DB" stroke-width="9"/>
+
+  <!-- Dollar pill (left) -->
+  <rect x="70" y="122" width="48" height="30" rx="15" fill="#1A56DB"/>
+  <text x="94" y="142" text-anchor="middle" fill="white" font-size="18" font-weight="700">$</text>
+
+  <!-- Arrow -->
+  <line x1="122" y1="137" x2="150" y2="137" stroke="#1A56DB" stroke-width="5" stroke-linecap="round"/>
+  <polygon points="150,127 168,137 150,147" fill="#1A56DB"/>
+
+  <!-- Result pill (right) -->
+  <rect x="166" y="122" width="48" height="30" rx="15" fill="#DBEAFE"/>
+  <text x="190" y="142" text-anchor="middle" fill="#1A56DB" font-size="16" font-weight="700">✓</text>
+
+  <!-- Mini bar chart -->
+  <rect x="82"  y="172" width="11" height="24" rx="3" fill="#93C5FD"/>
+  <rect x="98"  y="162" width="11" height="34" rx="3" fill="#1A56DB"/>
+  <rect x="114" y="167" width="11" height="29" rx="3" fill="#93C5FD"/>
+  <rect x="130" y="158" width="11" height="38" rx="3" fill="#BFDBFE"/>
+  <rect x="146" y="165" width="11" height="31" rx="3" fill="#93C5FD"/>
+
+  <!-- Best bar checkmark badge -->
+  <circle cx="103" cy="155" r="10" fill="#22C55E"/>
+  <polyline points="98,155 102,159 109,149" fill="none" stroke="white" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- === WORDMARK === -->
+  <text x="230" y="162" fill="#1A56DB" font-size="56" font-weight="700" letter-spacing="-2">remit</text>
+  <text x="394" y="162" fill="#3B82F6" font-size="56" font-weight="300" letter-spacing="-2">check</text>
+
+  <!-- Green accent dot between words -->
+  <circle cx="390" cy="148" r="5" fill="#22C55E"/>
+
+  <!-- .io -->
+  <text x="548" y="136" fill="#3B82F6" font-size="22" font-weight="300" opacity="0.65">.io</text>
+
+  <!-- Tagline -->
+  <text x="230" y="190" fill="#6B9FD4" font-size="13.5" font-weight="400" letter-spacing="2.5">COMPARE · DECIDE · SEND</text>
+
+</svg>
