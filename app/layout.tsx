@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
-import { GoogleAnalytics } from "@next/third-parties/google";
+import Script from "next/script";
+
+const GA_ID = "G-JZMS3ECYS5";
 
 export const metadata: Metadata = {
   title: "RemitCheck",
@@ -18,9 +20,13 @@ export default function RootLayout({
       <body className="min-h-screen" style={{ backgroundColor: "#F0F6FF" }}>
         <Navbar />
         {children}
-        {process.env.NEXT_PUBLIC_GA_ID && (
-          <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID} />
-        )}
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="ga-init" strategy="afterInteractive">
+          {`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${GA_ID}');`}
+        </Script>
       </body>
     </html>
   );
